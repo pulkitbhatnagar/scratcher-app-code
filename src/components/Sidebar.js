@@ -12,21 +12,20 @@ export default function Sidebar({
   setRepeat10,
   repeat10,
 }) {
-  //const [input, setInput] = useState("Hello");
-  const [showit, setShow] = useState("true");
+ 
   const [count, setCount] = useState(0);
   const [rotateIS, setRotate] = useState(0);
 
   const move10Step = (e) => {
     setCount((prev) => prev + 1);
   };
-
+ 
   useEffect(() => {
     setOnClick({
       rotate: onClickData.rotate,
       xScale: count + 1,
     });
-  }, [count]);
+  }, [count,onClickData.rotate,setOnClick]);
 
   const show = () => {
     setDisplay(true);
@@ -47,7 +46,7 @@ export default function Sidebar({
       xScale: onClickData.xScale,
       rotate: rotateIS,
     });
-  }, [rotateIS]);
+  }, [rotateIS,setOnClick,onClickData.xScale]);
 
   const displayTextToShowFunction = () => {
     setDisplayTextToShow((prev) => !prev);

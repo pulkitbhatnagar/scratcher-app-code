@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useDrop } from "react-dnd";
-import Dragable from "./Dragable";
 export default function MidArea({ setDataVal }) {
   const [data, setData] = useState([]);
-  const [{ isOver }, drop] = useDrop(() => ({
+  const [ drop] = useDrop(() => ({
     accept: "div",
     drop: (item) => addDataToMidValue(item),
     collect: (monitor) => ({

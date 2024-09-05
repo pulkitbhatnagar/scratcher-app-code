@@ -1,7 +1,7 @@
 import { useDrag } from "react-dnd";
 import React from "react";
 export default function Dragable(value) {
-  const [{ isDragging }, drag] = useDrag(() => ({
+  const [ drag] = useDrag(() => ({
     type: "div",
     item: { detail: value },
     collect: (monitor) => ({

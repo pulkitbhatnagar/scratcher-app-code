@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CatSprite from "./CatSprite";
 import { replaceStringToValueScratcher } from "./util";
-import Icon from "./Icon";
+
 export default function PreviewArea({
   data = [],
   onClickData,
@@ -51,7 +51,7 @@ export default function PreviewArea({
         }
       });
     }
-  }, [data, flagButtonClicked, click, repeat10]);
+  }, [data, flagButtonClicked, click, repeat10,setDisplay,setDisplayTextToShow]);
 
   const spiritClicked = () => {
     setClick((prev) => !prev);
