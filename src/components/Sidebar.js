@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Icon from "./Icon";
-import { useDrop } from "react-dnd";
 
-import { TextField } from "@mui/material";
 import Dragable from "./Dragable";
 export default function Sidebar({
   setOnClick,
