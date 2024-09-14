@@ -8,7 +8,7 @@ export default function Dragable(value) {
             isDragging: !!monitor.isDragging(),
         }),
     }));
-    console.log(isDragging);
+
     return (
         <div id={value.id} ref={drag}>
             {value.text()}

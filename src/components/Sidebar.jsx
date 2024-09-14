@@ -55,7 +55,10 @@ export default function Sidebar({
     };
 
     const displayTextToShowFunction = () => {
-        setDisplayTextToShow((prev) => !prev);
+        if (sayHello === '') {
+        } else {
+            setDisplayTextToShow((prev) => !prev);
+        }
     };
 
     const Events = [
@@ -173,16 +176,13 @@ export default function Sidebar({
             action: 'sayHello',
             text: () => {
                 return (
-                    <div
-                        className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer w-60"
-                        //onClick={displayTextToShow}
-                    >
+                    <div className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer w-60">
                         {'say  '}
                         <input
                             type="text"
                             id="textDisplay"
                             value={sayHello}
-                            placeHolder="helloo"
+                            placeHolder="enter text to show"
                             onChange={(e) => {
                                 setHello(e.target.value);
                             }}
@@ -236,10 +236,7 @@ export default function Sidebar({
             action: 'repeat10',
             text: () => {
                 return (
-                    <div
-                        className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer w-60"
-                        //onClick={displayTextToShow}
-                    >
+                    <div className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer w-60">
                         {'repeat '}{' '}
                         <input
                             type="text"
